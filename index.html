@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel URL Shortener - README</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 3px solid #00b4d8;
+            overflow-x: auto;
+        }
+
+        code {
+            color: #ff4500;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        ul li i {
+            color: #00b4d8;
+            margin-right: 8px;
+        }
+
+        a {
+            color: #00b4d8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🌐 Laravel URL Shortener</h1>
+        <p>A simple and efficient URL shortener application built with Laravel, designed to help users generate short,
+            shareable links from long URLs. The application features a sleek UI that mimics the familiar Google Search
+            interface, offering an intuitive and user-friendly experience.</p>
+
+        <h2>🚀 Features</h2>
+        <ul>
+            <li><i class="fas fa-link"></i> <strong>URL Shortening:</strong> Convert long URLs into short, easily
+                shareable links.</li>
+            <li><i class="fas fa-route"></i> <strong>Redirection:</strong> Automatically redirect users to the original
+                URL when they access the shortened link.</li>
+            <li><i class="fas fa-chart-line"></i> <strong>Click Statistics:</strong> Track the number of clicks for each
+                shortened URL.</li>
+            <li><i class="fas fa-user-shield"></i> <strong>User Authentication:</strong> Secure login system for users
+                to manage their shortened URLs and view statistics.</li>
+            <li><i class="fas fa-shield-alt"></i> <strong>Security:</strong> Input validation and protection against
+                common vulnerabilities.</li>
+            <li><i class="fas fa-code"></i> <strong>Optional API:</strong> Shorten URLs programmatically via API.</li>
+        </ul>
+
+        <h2>🖥️ Screenshots</h2>
+        <h3>Main Page - URL Shortener (Google-like UI)</h3>
+        <img src="https://ahsanjuly29.github.io/url-shortner/public/assets/images/1.png"
+            alt="Laravel URL Shortener Interface">
+        <h3>Shortened URL Result</h3>
+        <img src="https://ahsanjuly29.github.io/url-shortner/public/assets/images/2.png" alt="Shortened URL Result">
+
+        <h2>🛠️ Installation</h2>
+        <h3>Prerequisites</h3>
+        <ul>
+            <li><i class="fas fa-check"></i> PHP >= 7.3</li>
+            <li><i class="fas fa-check"></i> Composer</li>
+            <li><i class="fas fa-check"></i> Laravel >= 8.0</li>
+            <li><i class="fas fa-check"></i> MySQL or any supported database</li>
+        </ul>
+
+        <h3>Step-by-Step Setup</h3>
+        <ol>
+            <li><strong>Clone the repository:</strong>
+                <pre><code>git clone https://github.com/Ahsanjuly29/url-shortner.git</code></pre>
+            </li>
+            <li><strong>Navigate to the project directory:</strong>
+                <pre><code>cd url-shortner</code></pre>
+            </li>
+            <li><strong>Install dependencies:</strong>
+                <pre><code>composer install</code></pre>
+            </li>
+            <li><strong>Set up environment variables:</strong>
+                <pre><code>cp .env.example .env</code></pre>
+                Update the database connection settings in <code>.env</code>.
+            </li>
+            <li><strong>Generate an application key:</strong>
+                <pre><code>php artisan key:generate</code></pre>
+            </li>
+            <li><strong>Run migrations:</strong>
+                <pre><code>php artisan migrate</code></pre>
+            </li>
+            <li><strong>Serve the application:</strong>
+                <pre><code>php artisan serve</code></pre>
+            </li>
+        </ol>
+
+        <h2>⚙️ Usage</h2>
+        <ol>
+            <li><strong>Shorten a URL:</strong> Enter a long URL in the input field and click "Shorten URL". The
+                shortened link will be displayed below the form.</li>
+            <li><strong>Redirect to Original URL:</strong> Use the shortened URL in your browser to be redirected to the
+                original long URL.</li>
+            <li><strong>User Authentication:</strong> Register or log in to manage your own URLs and view click
+                statistics.</li>
+            <li><strong>Track Clicks:</strong> Monitor how many times a shortened link has been clicked from your
+                dashboard.</li>
+        </ol>
+
+        <h2>🔑 Authentication</h2>
+        <p>Users can sign up and log in to view their personalized dashboard of shortened URLs and access click
+            statistics. User data is secured using Laravel's built-in authentication features.</p>
+
+        <h2>🛡️ Security</h2>
+        <ul>
+            <li><i class="fas fa-shield-alt"></i> <strong>Input Validation:</strong> User input is validated to prevent
+                malicious submissions.</li>
+            <li><i class="fas fa-lock"></i> <strong>HTTPS:</strong> Ensure that your application uses HTTPS for secure
+                communication.</li>
+        </ul>
+
+        <h2>🛠️ Built With</h2>
+        <ul>
+            <li><i class="fab fa-laravel"></i> <strong>Laravel:</strong> The powerful PHP framework for building robust
+                web applications.</li>
+            <li><i class="fas fa-key"></i> <strong>Jetstream:</strong> For user authentication and management.</li>
+            <li><i class="fab fa-bootstrap"></i> <strong>Blade:</strong> Laravel’s templating engine to create dynamic
+                views.</li>
+            <li><i class="fas fa-database"></i> <strong>MySQL:</strong> For database management.</li>
+        </ul>
+
+        <h2>📄 License</h2>
+        <p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for more details.
+        </p>
+
+        <div class="footer">
+            <p><strong>Laravel URL Shortener</strong> © 2024</p>
+        </div>
+    </div>
+</body>
+
+</html>
