@@ -19,4 +19,4 @@ Route::middleware('auth')->group(function () {
 // Url-shortener
 Route::get('/', [UrlController::class, 'index'])->name('dashboard');
 Route::post('/urls', [UrlController::class, 'store'])->name('urls.store'); // Create new short Link
-Route::get('/urls/{shortCode}', [UrlController::class, 'show'])->name('urls.show'); // Redirect to long Link
+Route::get('/{shortCode}', [UrlController::class, 'show'])->name('urls.show'); // Redirect to long Link
