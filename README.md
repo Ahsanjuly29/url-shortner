@@ -1,5 +1,8 @@
 # 🌐 Laravel URL Shortener
 
+# Live Link : http://short-url.my-style.in/ 
+You can use it as Guest or can Register to handle it later.
+
 A simple and efficient URL shortener application built with Laravel, designed to help users generate short, shareable links from long URLs. The application features a sleek UI that mimics the familiar Google Search interface, offering an intuitive and user-friendly experience.
 
 ## 🚀 Features
