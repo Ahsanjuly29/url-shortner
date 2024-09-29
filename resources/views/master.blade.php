@@ -922,7 +922,7 @@
             <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
                 <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
                     <div class="flex lg:justify-center lg:col-start-2">
-                        <a href="{{ route('dashboard') }}">
+                        <a href="{{ route('url.index') }}">
                             {{-- <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg"
                                 alt="Laravel Logo" width="80px;"> --}}
                             <svg class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]" viewBox="0 0 62 65"
@@ -936,6 +936,10 @@
                     @if (Route::has('login'))
                         <nav class="-mx-3 flex flex-1 justify-end">
                             @auth
+                                <a href="{{ route('dashboard') }}"
+                                    class="rounded-md px-3 py-2 btn btn-sm btn-outline-light me-2">
+                                    Dashboard
+                                </a>
                                 <a href="{{ url('/profile') }}"
                                     class="rounded-md px-3 py-2 btn btn-sm btn-outline-light me-2">
                                     Profile
