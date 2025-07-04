@@ -51,7 +51,7 @@
                             </td>
                         </tr>
                     @endforeach
-                    @if ($eachItem->count() > 0)
+                    @if ($eachItem?->count() > 0)
                         <tr>
                             <td colspan="13">
                                 <button id="multiple_delete_btn" class="btn btn-xs btn-danger mr-2 d-none" type="submit">
