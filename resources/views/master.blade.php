@@ -7,14 +7,10 @@
 
     <title>{{ env('APP_NAME') }}</title>
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/vendors/select2.min.css') }}">
-
     <!-- Styles -->
     <style>
         /* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
@@ -910,7 +906,113 @@
         }
     </style>
 
+    <style>
+        /* ! tailwindcss v3.4.1 inline implementation */
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+            border-color: #e5e7eb
+        }
 
+        :host,
+        html {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%;
+            font-family: Figtree, ui-sans-serif, system-ui;
+            font-feature-settings: normal
+        }
+
+        body {
+            margin: 0;
+            line-height: inherit
+        }
+
+        .absolute {
+            position: absolute
+        }
+
+        .relative {
+            position: relative
+        }
+
+        .-left-20 {
+            left: -5rem
+        }
+
+        .top-0 {
+            top: 0px
+        }
+
+        .flex {
+            display: flex
+        }
+
+        .grid {
+            display: grid
+        }
+
+        .hidden {
+            display: none
+        }
+
+        .min-h-screen {
+            min-height: 100vh
+        }
+
+        .w-full {
+            width: 100%
+        }
+
+        .max-w-2xl {
+            max-width: 42rem
+        }
+
+        .flex-col {
+            flex-direction: column
+        }
+
+        .items-center {
+            align-items: center
+        }
+
+        .justify-center {
+            justify-content: center
+        }
+
+        .selection\:bg-\[\#FF2D20\]::selection {
+            background-color: rgba(255, 45, 32, 1)
+        }
+
+        .selection\:text-white::selection {
+            color: #fff
+        }
+
+        .dark\:bg-black {
+            background-color: #000
+        }
+
+        /* Custom UI Enhancements */
+        .laravel-logo-svg {
+            height: 3rem;
+            width: auto;
+            fill: #FF2D20;
+        }
+
+        @media (min-width: 1024px) {
+            .laravel-logo-svg {
+                height: 4rem;
+            }
+        }
+
+        /* Your Table & Component Fixes */
+        td,
+        th {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
@@ -919,12 +1021,10 @@
             src="https://laravel.com/assets/img/welcome/background.svg" />
         <div
             class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-            <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
+            <div class="relative w-100 px-6">
                 <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
                     <div class="flex lg:justify-center lg:col-start-2">
                         <a href="{{ route('url.index') }}">
-                            {{-- <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg"
-                                alt="Laravel Logo" width="80px;"> --}}
                             <svg class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]" viewBox="0 0 62 65"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
